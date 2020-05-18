@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/add_item_fragment"
+        android:title="REFRESH_FRAGMENT" />
+    <item
+        android:id="@+id/remove_item_fragment"
+        android:title="REMOVE_FRAGMENT" />
+
+</menu>
