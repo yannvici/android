@@ -1,4 +1,4 @@
 package com.heyangpeng.recyclerview_demo
 
-class Student {
+data class Student(val name: String, val desc: String) {
 }
