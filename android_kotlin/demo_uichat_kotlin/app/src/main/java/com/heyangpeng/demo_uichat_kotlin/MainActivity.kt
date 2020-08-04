@@ -9,6 +9,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val msgs: MutableList<MsgContent> = ArrayList()
+
+    //lateinit 延时初始化关键词，一般用于初始化全局变量。通常和  if (!::全局变量.isInitialized) {}一起使用。
     private lateinit var adapter: ChatRecyclerViewAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +44,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 if (content.isNotEmpty()) {
                     val msg = MsgContent(content, MsgContent.TYPE_SEND)
                     msgs.add(msg)
+                    if (!::adapter.isInitialized) {
+                        adapter = ChatRecyclerViewAdapter(msgs)
+                    }
                     adapter.notifyItemInserted(msgs.size - 1)//当adapter中有新内容时，刷新
                     recyclerview_content.scrollToPosition(msgs.size - 1)//将recyclerview定位到最后一行
                     etInput.setText("")
