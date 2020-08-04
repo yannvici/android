@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">9_patch_demo</string>
+    <string name="picture_9_patch">This is picture that style is 9_Patch! This is picture that style is 9_Patch!
+        This is picture that style is 9_Patch! This is picture that style is 9_Patch! This is picture that style is 9_Patch!
+        This is picture that style is 9_Patch! This is picture that style is 9_Patch! This is picture that style is 9_Patch!</string>
+    <string name="picture_png">This is picture that style is PNG! This is picture that style is PNG! This is picture that style is PNG!</string>
+</resources>
