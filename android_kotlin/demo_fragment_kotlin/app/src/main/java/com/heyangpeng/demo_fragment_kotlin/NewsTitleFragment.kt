@@ -1,7 +1,6 @@
 package com.heyangpeng.demo_fragment_kotlin
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,7 +39,7 @@ class NewsTitleFragment : Fragment() {
         return news
     }
 
-    inner class NewsTitlesAdapter(val news: MutableList<News>) :
+    inner class NewsTitlesAdapter(private val news: MutableList<News>) :
         RecyclerView.Adapter<NewsTitlesAdapter.ViewHolder>() {
 
         inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
