@@ -33,7 +33,8 @@ class NewsTitleFragment : Fragment() {
     private fun getNews(): MutableList<News> {
         val news = ArrayList<News>()
         for (i in 1..50) {
-            val new = News("This is new title($i)", getRandomLengthName("This is new content($i)"))
+//            val new = News("This is new title($i)", getRandomStringName("This is new content($i)"))
+            val new = News("This is new title($i)", "This is new content($i)".repeat((5..20).random()))
             news.add(new)
         }
         return news
@@ -84,4 +85,6 @@ class NewsTitleFragment : Fragment() {
         }
         return builder.toString()
     }
+
+    private fun getRandomStringName(s: String): String = s * (5..20).random()
 }
