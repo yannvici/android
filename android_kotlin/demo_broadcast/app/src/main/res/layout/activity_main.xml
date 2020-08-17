@@ -13,6 +13,12 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Send Broadcast" />
+    <Button
+        android:id="@+id/sendBroadcastResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Send Broadcast" />
 
     <TextView
         android:layout_width="wrap_content"
